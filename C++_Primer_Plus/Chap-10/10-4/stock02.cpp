@@ -33,7 +33,7 @@ Stock::Stock(const std::string &co, long n, double pr)
 // class destructor
 Stock::~Stock()
 {
-    std::cout << "Bye, " << company << "!\n";
+    //std::cout << "Bye, " << company << "!\n";
 }
 
 /*
