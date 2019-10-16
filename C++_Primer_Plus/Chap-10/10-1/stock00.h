@@ -16,6 +16,7 @@ private:
     {
         total_val = shares * share_val;
     }
+
 public:
     void acquire(const std::string &co, long n, double pr);
     void buy(long num, double price);

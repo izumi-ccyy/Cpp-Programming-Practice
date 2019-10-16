@@ -1,7 +1,7 @@
 // stock00.cpp -- implementing the stock class
 // version 00
-#include <iostream>
 #include "stock00.h"
+#include <iostream>
 
 void Stock::acquire(const std::string &co, long n, double pr)
 {
@@ -30,12 +30,12 @@ void Stock::buy(long num, double price)
         shares += num;
         share_val = price;
         set_tot();
-    }
+    };
 }
 
 void Stock::sell(long num, double price)
 {
-    using std::cout
+    using std::cout;
     if (num < 0)
     {
         cout << "Number of shares sold can't be negative. "
