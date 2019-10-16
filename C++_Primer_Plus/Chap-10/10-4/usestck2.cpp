@@ -11,8 +11,7 @@ int main()
         Stock("NanoSmart", 12, 20.0),
         Stock("Boffo Objects", 200, 2.0),
         Stock("Monolithic Obelisks", 130, 3.25),
-        Stock("Fleep Enterprises", 60, 6.5)
-    };
+        Stock("Fleep Enterprises", 60, 6.5)};
 
     std::cout << "Stock holdings:\n";
     int st;
