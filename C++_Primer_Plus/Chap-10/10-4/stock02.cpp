@@ -1,12 +1,12 @@
-// stock00.cpp -- implementing the stock class
-// version 00
+// stock02.cpp -- implementing the stock class
+// version 02
 #include "stock02.h"
 #include <iostream>
 
-// constructors (verbose version)
+// constructors
 Stock::Stock()
 {
-    std::cout << "Default constructor called\n";
+    //std::cout << "Default constructor called\n";
     company = "no name";
     shares = 0;
     share_val = 0.0;
@@ -15,7 +15,7 @@ Stock::Stock()
 
 Stock::Stock(const std::string &co, long n, double pr)
 {
-    std::cout << "Constructor using " << co << " called\n";
+    //std::cout << "Constructor using " << co << " called\n";
     company = co;
 
     if (n < 0)
@@ -95,7 +95,7 @@ void Stock::update(double price)
     set_tot();
 }
 
-void Stock::show()
+void Stock::show() const
 {
     using std::cout;
     using std::ios_base;
@@ -114,4 +114,12 @@ void Stock::show()
     // restore original format
     cout.setf(orig, ios_base::floatfield);
     cout.precision(prec);
+}
+
+const Stock &Stock::topval(const Stock &s) const
+{
+    if (s.total_val > total_val)
+        return s;
+    else
+        return *this;
 }
