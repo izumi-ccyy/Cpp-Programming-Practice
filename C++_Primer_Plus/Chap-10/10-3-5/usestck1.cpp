@@ -1,7 +1,7 @@
 // usestck00.cpp -- the client program
 // compile with stock00.cpp
 #include <iostream>
-#include "stock00.h"
+#include "stock01.h"
 
 int main()
 {
