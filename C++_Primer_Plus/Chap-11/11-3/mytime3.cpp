@@ -1,5 +1,6 @@
 // mytime0.cpp -- implementing Time methods
-#include "mytime2.h"
+#include "mytime3.h"
+#include <cstddef>
 #include <iostream>
 
 Time::Time()
@@ -62,7 +63,8 @@ Time Time::operator*(double mult) const
     return result;
 }
 
-void Time::Show() const
+std::ostream &operator<<(std::ostream &os, const Time &t)
 {
-    std::cout << hours << " hours, " << minutes << " minutes";
+    os << t.hours << " hours, " << t.minutes << " minutres";
+    return os;
 }

@@ -1,6 +1,7 @@
 // mytime1.h -- Time class before operator overloading
-#ifndef MYTIME2_H_
-#define MYTIME2_H_
+#ifndef MYTIME3_H_
+#define MYTIME3_H_
+#include <iostream>
 
 class Time
 {
@@ -18,7 +19,11 @@ public:
     Time operator+(const Time &t) const;
     Time operator-(const Time &t) const;
     Time operator*(double n) const;
-    void Show() const;
+    friend Time operator*(double m, const Time &t)
+    {
+        return t * m;
+    }
+    friend std::ostream &operator<<(std::ostream &os, const Time &t);
 };
 
 #endif
