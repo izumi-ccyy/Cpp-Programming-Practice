@@ -22,6 +22,7 @@
     "C_Cpp.autocomplete": "Disabled", // 同上；这几条也可以考虑放到全局里，否则很多错误会报两遍，cpptools一遍clangd一遍
     "C_Cpp.suggestSnippets": false,
     "files.associations": {
-        "string": "cpp"
+        "string": "cpp",
+        "ostream": "cpp"
     }, // 同上
 }
