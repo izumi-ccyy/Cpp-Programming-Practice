@@ -31,7 +31,7 @@ int main()
 
     Time morefixing(3, 28);
     cout << "mroe fixing time = ";
-    total.Show();
+    morefixing.Show();
     cout << endl;
     total = morefixing.operator+(total);
     cout << "morefixing.operator+(total) = ";
