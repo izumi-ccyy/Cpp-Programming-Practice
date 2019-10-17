@@ -1,6 +1,6 @@
 // mytime0.h -- Time class before operator overloading
-#ifndef MYTIMEO_H_
-#define MYTIMEO_H_
+#ifndef MYTIME0_H_
+#define MYTIME0_H_
 
 class Time
 {

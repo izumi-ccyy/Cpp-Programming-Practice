@@ -1,7 +1,7 @@
 // usetime0.cpp -- using the first draft of the Time class
 // compile usetime0.cpp and mytime0.cpp together
+#include "mytime1.h"
 #include <iostream>
-#include "mytime0.h"
 
 int main()
 {
@@ -24,8 +24,17 @@ int main()
     fixing.Show();
     cout << endl;
 
-    total = coding.Sum(fixing);
-    cout << "coding.Sum(fixing) = ";
+    total = coding + fixing;
+    cout << "coding + fixing = ";
+    total.Show();
+    cout << endl;
+
+    Time morefixing(3, 28);
+    cout << "mroe fixing time = ";
+    total.Show();
+    cout << endl;
+    total = morefixing.operator+(total);
+    cout << "morefixing.operator+(total) = ";
     total.Show();
     cout << endl;
 
