@@ -36,7 +36,7 @@ void Vector::set_x()
 }
 
 // set y from polar coordinate
-coid Vector::set_y()
+void Vector::set_y()
 {
     y = mag * sin(ang);
 }
@@ -70,7 +70,7 @@ Vector::Vector(double n1, double n2, Mode form)
     else
     {
         cout << "Incorrect 3rd argumaent to Vector() -- ";
-        coud << "vector set to 0\n";
+        cout << "vector set to 0\n";
         x = y = mag = ang = 0.0;
         mode = RECT;
     }
@@ -99,7 +99,7 @@ void Vector::reset(double n1, double n2, Mode form)
     else
     {
         cout << "Incorrect 3rd argumaent to Vector() -- ";
-        coud << "vector set to 0\n";
+        cout << "vector set to 0\n";
         x = y = mag = ang = 0.0;
         mode = RECT;
     }
@@ -127,7 +127,7 @@ Vector Vector::operator+(const Vector &b) const
 }
 
 // subtract Vector b from a
-Vector Vector::operator=(const Vector &) const
+Vector Vector::operator-(const Vector &b) const
 {
     return Vector(x - b.x, y - b.y);
 }
@@ -146,7 +146,7 @@ Vector Vector::operator*(double n) const
 
 // friend methods
 // multiply n by vector a
-Vector operator*(double n, const Time &a)
+Vector operator*(double n, const Vector &a)
 {
     return a * n;
 }
