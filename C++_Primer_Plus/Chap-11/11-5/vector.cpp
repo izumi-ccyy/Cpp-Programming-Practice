@@ -62,8 +62,8 @@ Vector::Vector(double n1, double n2, Mode form)
     }
     else if (form == POL)
     {
-        mag == n1;
-        ang == n2 / Rad_to_deg;
+        mag = n1;
+        ang = n2 / Rad_to_deg;
         set_x();
         set_y();
     }
@@ -91,8 +91,8 @@ void Vector::reset(double n1, double n2, Mode form)
     }
     else if (form == POL)
     {
-        mag == n1;
-        ang == n2 / Rad_to_deg;
+        mag = n1;
+        ang = n2 / Rad_to_deg;
         set_x();
         set_y();
     }
