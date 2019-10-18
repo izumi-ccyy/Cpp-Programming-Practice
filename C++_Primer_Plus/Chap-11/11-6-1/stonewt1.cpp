@@ -1,5 +1,5 @@
 // stonewt.cpp -- Stonewt methods
-#include "stonewt.h"
+#include "stonewt1.h"
 #include <iostream>
 using std::cout;
 
@@ -26,7 +26,6 @@ Stonewt::Stonewt()
 
 Stonewt::~Stonewt()
 {
-
 }
 
 // show weight in stones
@@ -39,4 +38,15 @@ void Stonewt::show_stn() const
 void Stonewt::show_lbs() const
 {
     cout << pounds << " pounds\n";
+}
+
+// conversion functions
+Stonewt::operator int() const
+{
+    return int(pounds + 0.5);
+}
+
+Stonewt::operator double() const
+{
+    return pounds;
 }
