@@ -60,7 +60,7 @@ String &String::operator=(const String &st)
 }
 
 //assign a C string to a String
-String & String::operator=(const char *s)
+String &String::operator=(const char *s)
 {
     delete[] str;
     len = std::strlen(s);
@@ -70,13 +70,13 @@ String & String::operator=(const char *s)
 }
 
 // read-write char access for non-const String
-char & String::operator[](int i)
+char &String::operator[](int i)
 {
     return str[i];
 }
 
 // read-only char access for const String
-const char & String::operator[](int i) const
+const char &String::operator[](int i) const
 {
     return str[i];
 }
