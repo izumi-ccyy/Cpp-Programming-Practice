@@ -1,7 +1,7 @@
 // stringbad.h -- Stringbad class methods
+#include "stringbad.h"
 #include <cstring>
 #include <ostream>
-#include "stringbad.h"
 using std::cout;
 
 // initiallizing static class number
@@ -15,7 +15,7 @@ Stringbad::Stringbad(const char *s)
     str = new char(len + 1);
     std::strcpy(str, s);
     num_strings++;
-    cout << num_strings << ": \"" < str << "\" object created\n";
+    cout << num_strings << ": \"" << str << "\" object created\n";
 }
 
 Stringbad::Stringbad()
@@ -24,7 +24,7 @@ Stringbad::Stringbad()
     str = new char(4);
     std::strcpy(str, "C++");
     num_strings++;
-    cout << num_strings << ": \"" < str << "\" object created\n";
+    cout << num_strings << ": \"" << str << "\" object created\n";
 }
 
 Stringbad::~Stringbad()
