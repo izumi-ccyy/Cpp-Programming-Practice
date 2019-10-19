@@ -12,10 +12,11 @@ int main()
 {
     using std::endl;
     {
+        cout << "String an inner block.\n";
         Stringbad headline1("Celery Stalks at Midnight");
         Stringbad headline2("Lettuce Prey");
         Stringbad sports("Spinach Leaves Bowl for Dollard");
-        cout << "heardline1:" << headline1 << endl;
+        cout << "headline1: " << headline1 << endl;
         cout << "headline2: " << headline2 << endl;
         cout << "sports: " << sports << endl;
         callme1(headline1);
