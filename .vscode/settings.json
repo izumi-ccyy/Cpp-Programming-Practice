@@ -23,6 +23,7 @@
     "C_Cpp.suggestSnippets": false,
     "files.associations": {
         "string": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp"
     }, // 同上
 }
