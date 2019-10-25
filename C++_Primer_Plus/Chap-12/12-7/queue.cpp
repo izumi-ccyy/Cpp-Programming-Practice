@@ -1,6 +1,6 @@
 // queue.cpp -- Queue and Customer methods
-#include <cstdlib>
 #include "queue.h"
+#include <cstdlib>
 
 // Queue methods
 Queue::Queue(int qs) : qsize(qs)
@@ -12,7 +12,7 @@ Queue::Queue(int qs) : qsize(qs)
 Queue::~Queue()
 {
     Node *temp;
-    while (front !- nullptr)
+    while (front != nullptr)
     {
         temp = front;
         front = front->next;
@@ -38,8 +38,9 @@ int Queue::queuecount() const
 // Add item to  queue
 bool Queue::enqueue(const Item &item)
 {
-    if (isfull()) {
-    return false;
+    if (isfull())
+    {
+        return false;
     }
     Node *add = new Node;
     add->item = item;
@@ -47,7 +48,8 @@ bool Queue::enqueue(const Item &item)
     items++;
     if (front == nullptr)
         front = add;
-    else {
+    else
+    {
         rear->next = add;
     }
     rear = add;
@@ -57,8 +59,9 @@ bool Queue::enqueue(const Item &item)
 // Place front item into item variable and remove from queue
 bool Queue::dequeue(Item &item)
 {
-    if (front == nullptr) {
-    return false;
+    if (front == nullptr)
+    {
+        return false;
     }
     item = front->item;
     items--;
