@@ -34,7 +34,7 @@ int main()
     double perhour;
     cin >> perhour;
     double min_per_cust;
-    min_per_cust = MIN_PER_HR;
+    min_per_cust = MIN_PER_HR / perhour;
 
     Item temp;
     long turnaways = 0;
@@ -79,7 +79,7 @@ int main()
     {
         cout << "customers accepted: " << customers << endl;
         cout << "  customers served: " << served << endl;
-        cout << "         turbaways: " << turnaways << endl;
+        cout << "         turnaways: " << turnaways << endl;
         cout << "average queue size: ";
         cout.precision(2);
         cout.setf(ios_base::fixed, ios_base::floatfield);
